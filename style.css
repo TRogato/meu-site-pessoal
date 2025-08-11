@@ -16,7 +16,7 @@ Dusko Stamenic */
   max-width: 400px;
   grid-column: 2/3;
   display: flex;
-  gap: 0px;
+  gap: 20px;
   flex-direction: column;
   justify-content: center;
 }
@@ -56,45 +56,5 @@ button {
 button:hover {
   box-shadow: 0px 10px 20px rgba(0,0,0,.3);
   cursor: pointer;
-}
-
-/* Responsividade para telas menores */
-@media (max-width: 900px) {
-  .hero {
-    grid-template-columns: 1fr;
-    height: auto;
-    padding: 40px 0;
-  }
-  .hero_content {
-    position: static;
-    left: 0;
-    max-width: 90vw;
-    margin: 0 auto;
-    padding: 20px;
-    grid-column: 1/2;
-  }
-  svg {
-    width: 100vw;
-    height: auto;
-    max-width: 100%;
-    grid-column: 1/2;
-  }
-}
-
-@media (max-width: 600px) {
-  h1 {
-    font-size: clamp(24px, 8vw, 40px);
-  }
-  p {
-    font-size: clamp(14px, 4vw, 18px);
-  }
-  .hero_content {
-    padding: 10px;
-    gap: 10px;
-  }
-  button {
-    width: 100%;
-    min-width: 0;
-  }
 }
 
