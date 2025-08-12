@@ -19,19 +19,43 @@
   <header>
     <section id="content"></section>
     <div id="menu">
+      <button id="menu-toggle" aria-label="Abrir menu" style="display:none;">
+        <span style="font-size:2em;">&#9776;</span>
+      </button>
       <nav>
-        <ul>
+        <ul id="menu-list">
           <li><a title="Meios de comunicação" href="contato.html">Contato</a></li>
           <li><a title="Meios de projetos" href="projetos.html">Projetos</a></li>
-          <li><a title="Experiências profissionais e qualificações" href="experiencia.html">Experiência</a>
-          </li>
+          <li><a title="Experiências profissionais e qualificações" href="experiencia.html">Experiência</a></li>
           <li><a title="Formação escolar e profissional" href="formacao.html">Formação</a></li>
-          <li><a title="Página inicial" href="index.html"><img src="images/netbeans-original.svg" height="20"
-                alt="Página Inicial"></a></li>
+          <li><a title="Página inicial" href="index.html"><img src="images/netbeans-original.svg" height="20" alt="Página Inicial"></a></li>
           <li><img src="images/logo.png" height="50" alt="Logotipo Tiago Rogato" /></li>
         </ul>
       </nav>
     </div>
+    <script>
+      // Menu responsivo para mobile
+      function toggleMenu() {
+        var menu = document.getElementById('menu-list');
+        menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+      }
+      function handleResize() {
+        var menu = document.getElementById('menu-list');
+        var btn = document.getElementById('menu-toggle');
+        if(window.innerWidth <= 900) {
+          btn.style.display = 'block';
+          menu.style.display = 'none';
+        } else {
+          btn.style.display = 'none';
+          menu.style.display = 'flex';
+        }
+      }
+      document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('menu-toggle').onclick = toggleMenu;
+        handleResize();
+        window.addEventListener('resize', handleResize);
+      });
+    </script>
   </header>
 
   <div class="title">
@@ -108,7 +132,7 @@
           <img alt="grafana" title="grafana" width="30" height="30"
             src="images/ICOm/grafana-original-wordmark.svg" />
           <img alt="PHP" title="PHP" width="30" height="30"
-            src="images/ICOm/php/php-original.svg" />
+            src="images/ICOm/php-original.svg" />
           <img alt="Laravel" title="Laravel" width="30" height="30"
             src="images/ICOm/laravel-original.svg" />
           <img alt="JQuery" title="JQuery" width="30" height="30"
