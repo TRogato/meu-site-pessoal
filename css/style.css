@@ -1,3 +1,13 @@
+/* Ajuste para imagem do perfil expandir em telas pequenas */
+@media (max-width: 600px) {
+    .content-inside figure img {
+        width: 80vw !important;
+        max-width: 320px !important;
+        height: auto !important;
+        display: block;
+        margin: 0 auto;
+    }
+}
 /* Responsividade específica para o index (home) */
 @media (max-width: 900px) {
     .content-inside {
