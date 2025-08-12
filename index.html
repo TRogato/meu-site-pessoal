@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="author" contente="S e S Web World" />
+    <meta name="author" content="Carlos Eduardo Salvador" />
+    <meta name="author" content="Leticia Alves Santana" />
+    <meta name="description" content="S e S Web World, Desenvolvimento Web, Desenvolvimento de Sites, Desenvolvimento de Aplicativos" />
+    <meta name="keywords" content="sites, desenvolvimento, programação, web design, desenvolvimento de sites, desenvolvimento web, aplicativos, desenvolvimento de aplicativos, manutenção de sites" />
+    <meta name="copyright" content="&copy; S E S WEB WORLD" />
+    <title>Home</title>
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="img/4269logo-oficial.ico" type="image/x-icon" />
+    <!--CSS Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <!-- W3.CSS -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" /> 
+    <!-- CSS Personalizado -->
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+<body>
+
+    <div id="preloader">
+        <div class="inner">
+            <img src="img/now-loading.gif" class="loading" alt="Tela de carregamento" />
+        </div>
+    </div>
+    <div class="container" id="conteudo">
+        <div class="row">
+            <!--<div class="box">
+                <img src="img/logo-oficial2.jpg" alt="Logomarcar S e S Web World" />
+            </div>
+            <div class="box">
+                <img src="img/aviso.png" alt="Aviso. Site em construão" />
+            </div>-->
+        </div>
+    </div>
+
+    <!--js Bootstrap jQuery -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script> 
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('conteudo').style.display = "block";
+            setTimeout(function() {
+                document.getElementById('preloader').style.display = "none";
+            }, 8100);
+        }
+    </script>
+</body>
+</html>
