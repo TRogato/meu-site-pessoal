@@ -200,6 +200,22 @@ form label {
     z-index: 100;
 }
 
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 101;
+    background: #23272b;
+    box-shadow: 0 2px 12px #0003;
+}
+
+main, .content, .formacao-main {
+    margin-top: 90px !important;
+}
+
 body {
     padding-bottom: 110px; /* espaço para o footer não cobrir conteúdo */
+    /* espaço para o header fixo */
+    box-sizing: border-box;
 }
