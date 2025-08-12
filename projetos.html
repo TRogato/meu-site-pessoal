@@ -10,7 +10,6 @@
     <meta http-equiv="Expires" content="0" />
     <title>Home</title>
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
-
     <!--CSS-->
     <link href="css/style.css" type="text/css" rel="stylesheet">
 </head>
@@ -26,9 +25,11 @@
                 <ul id="menu-list">
                     <li><a title="Meios de comunicação" href="contato.html">Contato</a></li>
                     <li><a title="Meios de projetos" href="projetos.html">Projetos</a></li>
-                    <li><a title="Experiências profissionais e qualificações" href="experiencia.html">Experiência</a></li>
+                    <li><a title="Experiências profissionais e qualificações" href="experiencia.html">Experiência</a>
+                    </li>
                     <li><a title="Formação escolar e profissional" href="formacao.html">Formação</a></li>
-                    <li><a title="Página inicial" href="index.html"><img src="images/netbeans-original.svg" height="20" alt="Página Inicial"></a></li>
+                    <li><a title="Página inicial" href="index.html"><img src="images/netbeans-original.svg" height="20"
+                                alt="Página Inicial"></a></li>
                     <li><img src="images/logo.png" height="50" alt="Logotipo Tiago Rogato" /></li>
                 </ul>
             </nav>
@@ -41,7 +42,7 @@
             function handleResize() {
                 var menu = document.getElementById('menu-list');
                 var btn = document.getElementById('menu-toggle');
-                if(window.innerWidth <= 900) {
+                if (window.innerWidth <= 900) {
                     btn.style.display = 'block';
                     menu.style.display = 'none';
                 } else {
@@ -49,7 +50,7 @@
                     menu.style.display = 'flex';
                 }
             }
-            document.addEventListener('DOMContentLoaded', function() {
+            document.addEventListener('DOMContentLoaded', function () {
                 document.getElementById('menu-toggle').onclick = toggleMenu;
                 handleResize();
                 window.addEventListener('resize', handleResize);
