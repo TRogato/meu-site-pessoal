@@ -283,10 +283,8 @@ form label {
     color: #111111;
     font-weight: bold;
 }
+
 .footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
     width: 100%;
     height: 100px;
     background-color: #111111;
@@ -296,6 +294,7 @@ form label {
     align-items: center;
     justify-content: center;
     z-index: 100;
+    margin-top: auto;
 }
 
 header {
@@ -312,8 +311,12 @@ main, .content, .formacao-main {
     margin-top: 90px !important;
 }
 
+html, body {
+    height: 100%;
+}
 body {
-    padding-bottom: 110px; /* espaço para o footer não cobrir conteúdo */
-    /* espaço para o header fixo */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     box-sizing: border-box;
 }
