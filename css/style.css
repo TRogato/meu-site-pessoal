@@ -269,6 +269,14 @@
     .footer {
         height: 80px !important;
         font-size: 0.9em !important;
+        width: 100vw;
+        background: #23272b;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: auto;
+        border-top: 1px solid #444;
     }
 }
 body, .formacao-main {
