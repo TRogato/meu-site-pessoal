@@ -22,16 +22,55 @@
                 <span style="font-size:2em;">&#9776;</span>
             </button>
             <nav>
-                <ul id="menu-list">
-                    <li><a title="Meios de comunicação" href="contato.html">Contato</a></li>
-                    <li><a title="Meios de projetos" href="projetos.html">Projetos</a></li>
-                    <li><a title="Experiências profissionais e qualificações" href="experiencia.html">Experiência</a>
+                <ul id="menu-list" style="background: #23272b; border-radius: 16px; box-shadow: 0 2px 12px #0006; padding: 8px 24px; display: flex; gap: 18px; align-items: center; margin: 0; border: 1px solid #444;">
+                    <li style="transition: background 0.2s, transform 0.2s; border-radius:8px;">
+                        <a title="Meios de comunicação" href="contato.html" style="color:#7ecfff; font-weight:500; padding:8px 16px; border-radius:8px; text-decoration:none; display:block;">Contato</a>
                     </li>
-                    <li><a title="Formação escolar e profissional" href="formacao.html">Formação</a></li>
-                    <li><a title="Página inicial" href="index.html"><img src="images/netbeans-original.svg" height="20"
-                                alt="Página Inicial"></a></li>
-                    <!--<li><img src="images/logo.png" height="50" alt="Logotipo Tiago Rogato" /></li>-->
+                    <li style="transition: background 0.2s, transform 0.2s; border-radius:8px;">
+                        <a title="Meios de projetos" href="projetos.html" style="color:#7ecfff; font-weight:500; padding:8px 16px; border-radius:8px; text-decoration:none; display:block;">Projetos</a>
+                    </li>
+                    <li style="transition: background 0.2s, transform 0.2s; border-radius:8px;">
+                        <a title="Experiências profissionais e qualificações" href="experiencia.html" style="color:#7ecfff; font-weight:500; padding:8px 16px; border-radius:8px; text-decoration:none; display:block;">Experiência</a>
+                    </li>
+                    <li style="transition: background 0.2s, transform 0.2s; border-radius:8px;">
+                        <a title="Formação escolar e profissional" href="formacao.html" style="color:#7ecfff; font-weight:500; padding:8px 16px; border-radius:8px; text-decoration:none; display:block;">Formação</a>
+                    </li>
+                    <li style="transition: background 0.2s, transform 0.2s; border-radius:8px;">
+                        <a title="Página inicial" href="index.html" style="padding:8px 16px; border-radius:8px; display:flex; align-items:center; gap:6px; text-decoration:none; color:#7ecfff;">
+                            <img src="images/netbeans-original.svg" height="20" alt="Página Inicial" style="vertical-align:middle;" />
+                            Início
+                        </a>
+                    </li>
                 </ul>
+                <style>
+                    #menu-list li:hover {
+                        background: #1a202c;
+                        transform: translateY(-2px) scale(1.05);
+                    }
+                    #menu-list a:hover {
+                        color: #fff;
+                        text-decoration: underline;
+                    }
+                    @media (max-width: 900px) {
+                        #menu-list {
+                            flex-direction: column !important;
+                            gap: 0 !important;
+                            width: 100vw !important;
+                            border-radius: 0 !important;
+                            box-shadow: none !important;
+                            border: none !important;
+                            padding: 0 !important;
+                        }
+                        #menu-list li {
+                            width: 100vw !important;
+                            border-radius: 0 !important;
+                        }
+                        #menu-list a {
+                            padding: 16px 24px !important;
+                            font-size: 1.2em !important;
+                        }
+                    }
+                </style>
             </nav>
         </div>
         <script>
