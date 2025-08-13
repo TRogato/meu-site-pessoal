@@ -23,21 +23,13 @@
             </button>
             <nav>
                 <ul id="menu-list" style="background: #23272b; border-radius: 16px; box-shadow: 0 2px 12px #0006; padding: 8px 24px; display: flex; gap: 18px; align-items: center; margin: 0; border: 1px solid #444;">
-                    <li style="transition: background 0.2s, transform 0.2s; border-radius:8px;">
-                        <a title="Meios de comunicação" href="contato.html" style="color:#7ecfff; font-weight:500; padding:8px 16px; border-radius:8px; text-decoration:none; display:block;">Contato</a>
-                    </li>
-                    <li style="transition: background 0.2s, transform 0.2s; border-radius:8px;">
-                        <a title="Meios de projetos" href="projetos.html" style="color:#7ecfff; font-weight:500; padding:8px 16px; border-radius:8px; text-decoration:none; display:block;">Projetos</a>
-                    </li>
-                    <li style="transition: background 0.2s, transform 0.2s; border-radius:8px;">
-                        <a title="Experiências profissionais e qualificações" href="experiencia.html" style="color:#7ecfff; font-weight:500; padding:8px 16px; border-radius:8px; text-decoration:none; display:block;">Experiência</a>
-                    </li>
-                    <li style="transition: background 0.2s, transform 0.2s; border-radius:8px;">
-                        <a title="Formação escolar e profissional" href="formacao.html" style="color:#7ecfff; font-weight:500; padding:8px 16px; border-radius:8px; text-decoration:none; display:block;">Formação</a>
-                    </li>
-                    <li style="transition: background 0.2s, transform 0.2s; border-radius:8px;">
-                        <a title="Página inicial" href="index.html" style="padding:8px 16px; border-radius:8px; display:flex; align-items:center; gap:6px; text-decoration:none; color:#7ecfff;">
-                            <img src="images/netbeans-original.svg" height="20" alt="Página Inicial" style="vertical-align:middle;" />
+                    <li class="menu-item"><a title="Meios de comunicação" href="contato.html" class="menu-link">Contato</a></li>
+                    <li class="menu-item"><a title="Meios de projetos" href="projetos.html" class="menu-link">Projetos</a></li>
+                    <li class="menu-item"><a title="Experiências profissionais e qualificações" href="experiencia.html" class="menu-link">Experiência</a></li>
+                    <li class="menu-item"><a title="Formação escolar e profissional" href="formacao.html" class="menu-link">Formação</a></li>
+                    <li class="menu-item">
+                        <a title="Página inicial" href="index.html" class="menu-link">
+                            <img src="images/netbeans-original.svg" height="20" alt="Página Inicial" class="menu-icon" />
                             Início
                         </a>
                     </li>
@@ -163,16 +155,10 @@
         </section>
     </main><br>
     <footer class="footer" style="margin-top: auto; background: #23272b; color: #7ecfff; border-top: 1px solid #444; display: flex; align-items: center; justify-content: center; height: 80px; width: 100vw; box-shadow: 0 -2px 12px #0003;">
-        <div style="display: flex; align-items: center; gap: 16px;">
+        <div class="footer-content" style="display: flex; align-items: center; gap: 16px;">
             <img src="images/logo.png" alt="Logo Tiago Rogato" style="height: 40px; border-radius: 8px; box-shadow: 0 2px 8px #0002; animation: pulse 2s infinite alternate;" />
-            <span style="font-size: 1.1em;">Site desenvolvido por <b>Tiago Rogato</b> &copy; <a href="mailto:t.rogato@gmail.com" style="color:#7ecfff;text-decoration:none;">Contato</a> | <a href="https://github.com/TRogato" target="_blank" style="color:#7ecfff;text-decoration:none;">GitHub</a></span>
+            <span style="font-size: 1.1em;">Site desenvolvido por <b>Tiago Rogato</b> &copy; <a href="mailto:t.rogato@gmail.com" class="footer-link">Contato</a> | <a href="https://github.com/TRogato" target="_blank" class="footer-link">GitHub</a></span>
         </div>
-        <style>
-        @keyframes pulse {
-            0% { box-shadow: 0 2px 8px #0002; }
-            100% { box-shadow: 0 4px 16px #7ecfff44; }
-        }
-        </style>
     </footer>
 </body>
 
