@@ -260,6 +260,11 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
 
+## 📄 Licença
+
+Este repositório está sob a licença [MIT](https://github.com/TRogato/Trogato/blob/main/LICENSE). Por favor, consulte o arquivo `LICENSE` para mais detalhes.
+
+
 ---
 
 ✍ Desenvolvido por **Tiago Rogato**
