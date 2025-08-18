@@ -1,4 +1,3 @@
-
 # Landing Page
 
 Landing page estática construída com **HTML**, **CSS**, **JavaScript** e **PHP** (para processamento de formulário).  
@@ -264,6 +263,9 @@ SOFTWARE.
 ---
 
 ✍ Desenvolvido por **Tiago Rogato**
-📧 contato: [contato@](mailto:t.rogato@gmail.com)
+📧 contato:<br>
+[<img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />](https://www.linkedin.com/in/tiago-rogato-da-silveira-095563b6/)
+[<img alt="GitHub" src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" />](https://github.com/TRogato/Trogato)
+[<img alt="Email" src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" />](t.rogato@gmail.com)
 
-
+---
