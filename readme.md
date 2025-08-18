@@ -1,14 +1,4 @@
-Perfeito 🙌. Vamos então gerar o **README.md final** já com:
 
-* Licença **MIT** adicionada.
-* Personalização mínima (seu nome *Tiago Rogato*, e-mail fictício para o formulário).
-* Estrutura real do repositório conforme está hoje (`index.html`, `contato.html`, `experiencia.html`, `formacao.html`, `projetos.html`, pastas `css/`, `js/`, `images/`, `php/`).
-
-Aqui está o arquivo pronto para colocar direto no GitHub:
-
----
-
-````markdown
 # Landing Page
 
 Landing page estática construída com **HTML**, **CSS**, **JavaScript** e **PHP** (para processamento de formulário).  
