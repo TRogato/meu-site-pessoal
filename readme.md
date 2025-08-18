@@ -264,6 +264,6 @@ SOFTWARE.
 ---
 
 ✍ Desenvolvido por **Tiago Rogato**
-📧 contato: [contato@tiagorogato.com](mailto:t.rogato@gmail.com)
+📧 contato: [contato@](mailto:t.rogato@gmail.com)
 
 
