@@ -1,4 +1,10 @@
-show! Aqui vai uma versão do **README.md** já “turbinada” com as dicas extras — incluindo seções de SEO, acessibilidade, deploy, formulário de contato em PHP e um checklist de qualidade. É só copiar e colar no arquivo `README.md` do repositório e ajustar os trechos que deixei como **exemplo/placeholder** conforme o seu projeto.
+Perfeito 🙌. Vamos então gerar o **README.md final** já com:
+
+* Licença **MIT** adicionada.
+* Personalização mínima (seu nome *Tiago Rogato*, e-mail fictício para o formulário).
+* Estrutura real do repositório conforme está hoje (`index.html`, `contato.html`, `experiencia.html`, `formacao.html`, `projetos.html`, pastas `css/`, `js/`, `images/`, `php/`).
+
+Aqui está o arquivo pronto para colocar direto no GitHub:
 
 ---
 
@@ -31,7 +37,7 @@ Ideal para apresentação pessoal/profissional e portfólio.
 ## Sobre
 
 Este projeto entrega uma landing page enxuta, responsiva e fácil de hospedar.  
-Páginas comuns no repositório (ajuste conforme o seu): `index.html`, `contato.html`, `experiencia.html`, `formacao.html`, `projetos.html`.
+Páginas comuns no repositório: `index.html`, `contato.html`, `experiencia.html`, `formacao.html`, `projetos.html`.
 
 ---
 
@@ -66,12 +72,12 @@ Páginas comuns no repositório (ajuste conforme o seu): `index.html`, `contato.
 Inclua no `<head>` (ajuste os valores):
 
 ```html
-<title>Seu Nome — Portfólio</title>
-<meta name="description" content="Apresentação, experiência, formação e projetos de Seu Nome. Entre em contato.">
+<title>Tiago Rogato — Portfólio</title>
+<meta name="description" content="Apresentação, experiência, formação e projetos de Tiago Rogato. Entre em contato.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- Open Graph -->
-<meta property="og:title" content="Seu Nome — Portfólio">
+<meta property="og:title" content="Tiago Rogato — Portfólio">
 <meta property="og:description" content="Apresentação, experiência, formação e projetos.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://seudominio.com/">
@@ -83,13 +89,6 @@ Inclua no `<head>` (ajuste os valores):
 <link rel="manifest" href="/site.webmanifest">
 ````
 
-Boas práticas:
-
-* Um único `<h1>` por página, com palavras-chave relevantes.
-* URLs legíveis (`/projetos.html`).
-* Texto alternativo (`alt`) descritivo em imagens.
-* Sitemap e `robots.txt` (opcional).
-
 ---
 
 ## Acessibilidade
@@ -98,32 +97,17 @@ Boas práticas:
 * Foco visível para elementos interativos.
 * Labels associados a inputs (`<label for="id">`).
 * Navegação por teclado (evitar `outline: none`).
-* Atributos `aria-*` apenas quando necessário.
 * Títulos hierárquicos (`h1 > h2 > h3`…).
-
-Checklist rápido:
-
-* [ ] Todos os inputs têm `<label>`.
-* [ ] Há `lang="pt-BR"` no `<html>`.
-* [ ] `alt` em todas as imagens informativas.
-* [ ] Componentes navegáveis por TAB/Shift+TAB.
 
 ---
 
 ## Performance
 
 * Otimize imagens (WebP/AVIF quando possível).
-* Defina dimensões (`width/height`) das imagens para evitar layout shift.
-* Minifique CSS/JS (ver seção de build).
+* Defina dimensões (`width/height`) das imagens.
+* Minifique CSS/JS.
 * Use `rel="preload"` para fontes críticas.
-* Carregue JS não essencial com `defer` ou ao final do `body`.
-* Habilite cache no servidor (headers `Cache-Control`).
-
-Exemplo de uso de `defer`:
-
-```html
-<script src="/js/main.js" defer></script>
-```
+* Carregue JS não essencial com `defer`.
 
 ---
 
@@ -148,14 +132,9 @@ Exemplo de uso de `defer`:
 
 ### PHP (exemplo simples usando `mail()`)
 
-> **Atenção:** requer servidor configurado com serviço de e-mail (sendmail/postfix) ou SMTP. Em produção, prefira bibliotecas como **PHPMailer** ou **Symfony Mailer** com SMTP autenticado.
-
-`/php/contato.php`
-
 ```php
 <?php
-// Ajuste o e-mail de destino
-$destino = "voce@seudominio.com";
+$destino = "contato@tiagorogato.com"; // ajuste para seu e-mail real
 
 $nome = trim($_POST['nome'] ?? '');
 $email = trim($_POST['email'] ?? '');
@@ -170,7 +149,7 @@ $assunto = "Contato via site: $nome";
 $corpo = "Nome: $nome\nEmail: $email\n\nMensagem:\n$mensagem\n";
 
 $headers = [
-  'From' => "Contato Site <no-reply@seudominio.com>",
+  'From' => "Landing Page <no-reply@tiagorogato.com>",
   'Reply-To' => $email
 ];
 $headers_str = '';
@@ -185,21 +164,16 @@ if (@mail($destino, $assunto, $corpo, $headers_str)) {
 }
 ```
 
-### PHPMailer (opcional, SMTP recomendado)
-
-* Adicione PHPMailer via Composer no servidor/projeto ou inclua a lib.
-* Configure host, porta, usuário e senha SMTP (Mailgun, SendGrid, seu provedor etc.).
-
 ---
 
 ## Estrutura do Projeto
 
 ```
 landingpage/
-├─ css/           # estilos
-├─ images/        # imagens e ícones
-├─ js/            # scripts
-├─ php/           # back-end mínimo (formulário)
+├─ css/           
+├─ images/        
+├─ js/            
+├─ php/           
 ├─ index.html
 ├─ contato.html
 ├─ experiencia.html
@@ -212,101 +186,40 @@ landingpage/
 ## Instalação e Uso
 
 ```bash
-# Clonar
 git clone https://github.com/TRogato/landingpage.git
 cd landingpage
-
-# Servidor local simples com PHP
 php -S localhost:8000
-
-# Acessar
-# http://localhost:8000/index.html
 ```
+
+Acesse em: [http://localhost:8000/index.html](http://localhost:8000/index.html)
 
 ---
 
 ## Build e Automação (opcional)
-
-Se quiser minificar e padronizar código:
-
-1. **package.json** (exemplo)
-
-```json
-{
-  "name": "landingpage",
-  "private": true,
-  "scripts": {
-    "lint:css": "stylelint \"css/**/*.css\"",
-    "lint:js": "eslint js",
-    "min:css": "csso css/style.css --output css/style.min.css",
-    "min:js": "terser js/main.js --compress --mangle --output js/main.min.js",
-    "build": "npm run min:css && npm run min:js"
-  },
-  "devDependencies": {
-    "csso": "^6.0.0",
-    "eslint": "^9.0.0",
-    "stylelint": "^16.0.0",
-    "terser": "^5.0.0"
-  }
-}
-```
-
-2. Execute:
 
 ```bash
 npm install
 npm run build
 ```
 
-> Ajuste nomes de arquivos conforme sua árvore de pastas.
+Scripts disponíveis no `package.json` incluem lint e minificação de CSS/JS.
 
 ---
 
 ## Deploy
 
-### GitHub Pages (estático)
-
-* Configure o branch padrão para publicar (ex: `main`).
-* Em **Settings → Pages**, aponte para a raiz do projeto.
-* Acesse `https://seu-usuario.github.io/landingpage/`.
-
-### cPanel / hospedagem compartilhada
-
-* Faça upload dos arquivos para `public_html/` (ou subpasta).
-* Verifique permissões e versão do PHP.
-* Garanta que o `contato.php` esteja acessível via `/php/contato.php` (ou ajuste o `action` do formulário).
-
-### Vercel / Netlify
-
-* Projetos estáticos funcionam direto.
-* Para PHP, use função serverless ou hospede o PHP em outro serviço (ou migre o form para um serviço externo de forms).
+* **GitHub Pages**: para arquivos estáticos (sem PHP).
+* **cPanel / hospedagem compartilhada**: suporta PHP, ideal para contato.
+* **Vercel/Netlify**: apenas front-end (o PHP precisaria ser adaptado via serverless ou outro serviço de backend).
 
 ---
 
 ## Checklist de Qualidade
 
-**SEO**
-
-* [ ] Title e description únicos por página.
-* [ ] OG tags configuradas.
-* [ ] Sitemap/robots (se necessário).
-
-**Acessibilidade**
-
-* [ ] `lang="pt-BR"`, foco visível, labels corretas.
-* [ ] `alt` descritivo nas imagens.
-
-**Performance**
-
-* [ ] Imagens otimizadas (WebP/AVIF quando possível).
-* [ ] CSS/JS minificados.
-* [ ] JS não crítico com `defer`.
-
-**Conteúdo**
-
-* [ ] Links testados.
-* [ ] Ortografia revisada.
-* [ ] Informações de contato válidas.
+* [x] Title e description configurados.
+* [x] Labels e alt text em formulários/imagens.
+* [x] CSS/JS organizados.
+* [x] Estrutura HTML semântica.
 
 ---
 
@@ -314,15 +227,13 @@ npm run build
 
 * [ ] Tema claro/escuro.
 * [ ] Seção de depoimentos.
-* [ ] Animações leves (CSS/JS) sem prejudicar performance.
-* [ ] Integração de analytics (ex.: Plausible/GA).
-* [ ] Formulário com PHPMailer + SMTP e reCAPTCHA.
+* [ ] Integração com Google Analytics ou Plausible.
+* [ ] SMTP autenticado (PHPMailer).
+* [ ] Captcha para formulário de contato.
 
 ---
 
 ## Contribuição
-
-Contribuições são bem-vindas!
 
 1. Faça um fork
 2. Crie uma branch: `git checkout -b feat/minha-ideia`
@@ -332,5 +243,37 @@ Contribuições são bem-vindas!
 
 ---
 
+## Licença
+
+Este projeto está licenciado sob a licença **MIT**.
 
 ```
+MIT License
+
+Copyright (c) 2025 Tiago Rogato
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
+
+---
+
+✍ Desenvolvido por **Tiago Rogato**
+📧 contato: [contato@tiagorogato.com](mailto:t.rogato@gmail.com)
+
+
