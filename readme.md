@@ -1,121 +1,336 @@
-Aqui está um exemplo de **README.md** em português para o repositório **TRogato/landingpage**, com base na estrutura de arquivos visível (HTML, CSS, JS, PHP, páginas como index.html, contato.html, formacao.html etc.) ([GitHub][1]):
+show! Aqui vai uma versão do **README.md** já “turbinada” com as dicas extras — incluindo seções de SEO, acessibilidade, deploy, formulário de contato em PHP e um checklist de qualidade. É só copiar e colar no arquivo `README.md` do repositório e ajustar os trechos que deixei como **exemplo/placeholder** conforme o seu projeto.
 
 ---
 
 ````markdown
 # Landing Page
 
-Repositório contendo uma landing page estática composta por HTML, CSS, JavaScript e PHP.
+Landing page estática construída com **HTML**, **CSS**, **JavaScript** e **PHP** (para processamento de formulário).  
+Ideal para apresentação pessoal/profissional e portfólio.
 
 ## Índice
 
-- [Sobre](#sobre)  
-- [Funcionalidades](#funcionalidades)  
-- [Conteúdo](#conteúdo)  
-- [Requisitos](#requisitos)  
-- [Instalação e uso](#instalação-e-uso)  
-- [Estrutura do projeto](#estrutura-do-projeto)  
+- [Sobre](#sobre)
+- [Funcionalidades](#funcionalidades)
+- [Tecnologias Utilizadas](#tecnologias-utilizadas)
+- [SEO e Metadados](#seo-e-metadados)
+- [Acessibilidade](#acessibilidade)
+- [Performance](#performance)
+- [Formulário de Contato (PHP)](#formulário-de-contato-php)
+- [Estrutura do Projeto](#estrutura-do-projeto)
+- [Instalação e Uso](#instalação-e-uso)
+- [Build e Automação (opcional)](#build-e-automação-opcional)
+- [Deploy](#deploy)
+- [Checklist de Qualidade](#checklist-de-qualidade)
+- [Roadmap](#roadmap)
+- [Contribuição](#contribuição)
 - [Licença](#licença)
 
 ---
 
 ## Sobre
 
-Este projeto é uma landing page informativa e estática, construída com HTML, CSS, JS e PHP, ideal para apresentação pessoal ou profissional de portfólio.
+Este projeto entrega uma landing page enxuta, responsiva e fácil de hospedar.  
+Páginas comuns no repositório (ajuste conforme o seu): `index.html`, `contato.html`, `experiencia.html`, `formacao.html`, `projetos.html`.
 
 ---
 
 ## Funcionalidades
 
-- Interface visual responsiva e moderna com HTML/CSS.  
-- Navegação entre páginas: 
-  - `index.html` – página principal.
-  - `contato.html` – formulário de contato (renderização ou envio pode envolver PHP).
-  - `experiencia.html` – seção de experiência.
-  - `formacao.html` – seção de formação acadêmica.
-  - `projetos.html` – exibição de projetos pessoais ou profissionais.  
-- Estilização em CSS nos diretórios `css/`.  
-- Scripts interativos ou funcionais em JavaScript no diretório `js/`.  
-- Uso de PHP no diretório `php/` (possivelmente para processar formulários ou incluir templates).
+- Layout responsivo com CSS.
+- Navegação simples entre seções/páginas.
+- Formulário de contato com processamento em PHP.
+- Estrutura pronta para SEO básico (title/description, OG tags).
+- Dicas e scripts para otimizar performance.
 
 ---
 
-## Conteúdo
+## Tecnologias Utilizadas
 
-| Linguagem/Tipo       | Proporção     |
-|----------------------|---------------|
-| HTML                 | ~81,5 %       |
-| CSS                  | ~15,8 %       |
-| PHP                  | ~2,1 %        |
-| JavaScript           | ~0,6 %        |
+**Front-end**
+- HTML5 semântico
+- CSS3 (flex/grid)
+- JavaScript (DOM básico)
 
-(Valores aproximados com base nas linguagens detectadas no repositório) :contentReference[oaicite:1]{index=1}
+**Back-end**
+- PHP (para envio do formulário)
 
----
-
-## Requisitos
-
-- Servidor web (locamente, por exemplo: Apache, Nginx ou PHP embutido).  
-- PHP instalado (caso os scripts presentes envolvam funcionalidades server-side).  
-- Navegador moderno para visualização da interface.
+**Ferramentas opcionais**
+- Node.js + npm (para minificação/lint)
+- GitHub Pages / cPanel / Vercel (para deploy)
 
 ---
 
-## Instalação e uso
+## SEO e Metadados
 
-1. Clone o repositório  
-   ```bash
-   git clone https://github.com/TRogato/landingpage.git
+Inclua no `<head>` (ajuste os valores):
+
+```html
+<title>Seu Nome — Portfólio</title>
+<meta name="description" content="Apresentação, experiência, formação e projetos de Seu Nome. Entre em contato.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Seu Nome — Portfólio">
+<meta property="og:description" content="Apresentação, experiência, formação e projetos.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://seudominio.com/">
+<meta property="og:image" content="https://seudominio.com/images/preview.jpg">
+
+<!-- Favicon / Manifest -->
+<link rel="icon" href="/images/favicon.ico">
+<link rel="apple-touch-icon" href="/images/icon-192.png">
+<link rel="manifest" href="/site.webmanifest">
 ````
 
-2. Navegue até o diretório do projeto
+Boas práticas:
 
-   ```bash
-   cd landingpage
-   ```
-3. Clone diretamente no seu servidor web (ex: `htdocs`, `www`, `public_html`) ou execute um servidor local usando PHP:
-
-   ```bash
-   php -S localhost:8000
-   ```
-4. Acesse no navegador:
-
-   * Página inicial: `http://localhost:8000/index.html`
-   * Outras páginas: `contato.html`, `experiencia.html`, `formacao.html`, `projetos.html`
+* Um único `<h1>` por página, com palavras-chave relevantes.
+* URLs legíveis (`/projetos.html`).
+* Texto alternativo (`alt`) descritivo em imagens.
+* Sitemap e `robots.txt` (opcional).
 
 ---
 
-## Estrutura do projeto
+## Acessibilidade
+
+* Use contrastes adequados (WCAG AA).
+* Foco visível para elementos interativos.
+* Labels associados a inputs (`<label for="id">`).
+* Navegação por teclado (evitar `outline: none`).
+* Atributos `aria-*` apenas quando necessário.
+* Títulos hierárquicos (`h1 > h2 > h3`…).
+
+Checklist rápido:
+
+* [ ] Todos os inputs têm `<label>`.
+* [ ] Há `lang="pt-BR"` no `<html>`.
+* [ ] `alt` em todas as imagens informativas.
+* [ ] Componentes navegáveis por TAB/Shift+TAB.
+
+---
+
+## Performance
+
+* Otimize imagens (WebP/AVIF quando possível).
+* Defina dimensões (`width/height`) das imagens para evitar layout shift.
+* Minifique CSS/JS (ver seção de build).
+* Use `rel="preload"` para fontes críticas.
+* Carregue JS não essencial com `defer` ou ao final do `body`.
+* Habilite cache no servidor (headers `Cache-Control`).
+
+Exemplo de uso de `defer`:
+
+```html
+<script src="/js/main.js" defer></script>
+```
+
+---
+
+## Formulário de Contato (PHP)
+
+### HTML (exemplo)
+
+```html
+<form action="/php/contato.php" method="POST">
+  <label for="nome">Nome</label>
+  <input id="nome" name="nome" type="text" required>
+
+  <label for="email">E-mail</label>
+  <input id="email" name="email" type="email" required>
+
+  <label for="mensagem">Mensagem</label>
+  <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+
+  <button type="submit">Enviar</button>
+</form>
+```
+
+### PHP (exemplo simples usando `mail()`)
+
+> **Atenção:** requer servidor configurado com serviço de e-mail (sendmail/postfix) ou SMTP. Em produção, prefira bibliotecas como **PHPMailer** ou **Symfony Mailer** com SMTP autenticado.
+
+`/php/contato.php`
+
+```php
+<?php
+// Ajuste o e-mail de destino
+$destino = "voce@seudominio.com";
+
+$nome = trim($_POST['nome'] ?? '');
+$email = trim($_POST['email'] ?? '');
+$mensagem = trim($_POST['mensagem'] ?? '');
+
+if (!$nome || !filter_var($email, FILTER_VALIDATE_EMAIL) || !$mensagem) {
+  http_response_code(400);
+  exit('Dados inválidos.');
+}
+
+$assunto = "Contato via site: $nome";
+$corpo = "Nome: $nome\nEmail: $email\n\nMensagem:\n$mensagem\n";
+
+$headers = [
+  'From' => "Contato Site <no-reply@seudominio.com>",
+  'Reply-To' => $email
+];
+$headers_str = '';
+foreach ($headers as $k => $v) $headers_str .= "$k: $v\r\n";
+
+if (@mail($destino, $assunto, $corpo, $headers_str)) {
+  header('Location: /contato.html?enviado=1');
+  exit;
+} else {
+  http_response_code(500);
+  exit('Falha ao enviar. Tente novamente mais tarde.');
+}
+```
+
+### PHPMailer (opcional, SMTP recomendado)
+
+* Adicione PHPMailer via Composer no servidor/projeto ou inclua a lib.
+* Configure host, porta, usuário e senha SMTP (Mailgun, SendGrid, seu provedor etc.).
+
+---
+
+## Estrutura do Projeto
 
 ```
 landingpage/
-├── css/
-│   └── … (arquivos de estilo CSS)
-├── images/
-│   └── … (imagens usadas no site)
-├── js/
-│   └── … (scripts JavaScript)
-├── php/
-│   └── … (scripts PHP, se houver)
-├── index.html
-├── contato.html
-├── experiencia.html
-├── formacao.html
-└── projetos.html
+├─ css/           # estilos
+├─ images/        # imagens e ícones
+├─ js/            # scripts
+├─ php/           # back-end mínimo (formulário)
+├─ index.html
+├─ contato.html
+├─ experiencia.html
+├─ formacao.html
+└─ projetos.html
 ```
 
 ---
 
-## Licença
+## Instalação e Uso
 
-Este projeto não possui licença definida. Sinta-se livre para usá-lo, cloná-lo ou adaptá-lo conforme sua necessidade. Caso deseje, você pode adicionar uma licença como [MIT](https://choosealicense.com/licenses/mit/) ou outra de sua preferência.
+```bash
+# Clonar
+git clone https://github.com/TRogato/landingpage.git
+cd landingpage
+
+# Servidor local simples com PHP
+php -S localhost:8000
+
+# Acessar
+# http://localhost:8000/index.html
+```
+
+---
+
+## Build e Automação (opcional)
+
+Se quiser minificar e padronizar código:
+
+1. **package.json** (exemplo)
+
+```json
+{
+  "name": "landingpage",
+  "private": true,
+  "scripts": {
+    "lint:css": "stylelint \"css/**/*.css\"",
+    "lint:js": "eslint js",
+    "min:css": "csso css/style.css --output css/style.min.css",
+    "min:js": "terser js/main.js --compress --mangle --output js/main.min.js",
+    "build": "npm run min:css && npm run min:js"
+  },
+  "devDependencies": {
+    "csso": "^6.0.0",
+    "eslint": "^9.0.0",
+    "stylelint": "^16.0.0",
+    "terser": "^5.0.0"
+  }
+}
+```
+
+2. Execute:
+
+```bash
+npm install
+npm run build
+```
+
+> Ajuste nomes de arquivos conforme sua árvore de pastas.
+
+---
+
+## Deploy
+
+### GitHub Pages (estático)
+
+* Configure o branch padrão para publicar (ex: `main`).
+* Em **Settings → Pages**, aponte para a raiz do projeto.
+* Acesse `https://seu-usuario.github.io/landingpage/`.
+
+### cPanel / hospedagem compartilhada
+
+* Faça upload dos arquivos para `public_html/` (ou subpasta).
+* Verifique permissões e versão do PHP.
+* Garanta que o `contato.php` esteja acessível via `/php/contato.php` (ou ajuste o `action` do formulário).
+
+### Vercel / Netlify
+
+* Projetos estáticos funcionam direto.
+* Para PHP, use função serverless ou hospede o PHP em outro serviço (ou migre o form para um serviço externo de forms).
+
+---
+
+## Checklist de Qualidade
+
+**SEO**
+
+* [ ] Title e description únicos por página.
+* [ ] OG tags configuradas.
+* [ ] Sitemap/robots (se necessário).
+
+**Acessibilidade**
+
+* [ ] `lang="pt-BR"`, foco visível, labels corretas.
+* [ ] `alt` descritivo nas imagens.
+
+**Performance**
+
+* [ ] Imagens otimizadas (WebP/AVIF quando possível).
+* [ ] CSS/JS minificados.
+* [ ] JS não crítico com `defer`.
+
+**Conteúdo**
+
+* [ ] Links testados.
+* [ ] Ortografia revisada.
+* [ ] Informações de contato válidas.
+
+---
+
+## Roadmap
+
+* [ ] Tema claro/escuro.
+* [ ] Seção de depoimentos.
+* [ ] Animações leves (CSS/JS) sem prejudicar performance.
+* [ ] Integração de analytics (ex.: Plausible/GA).
+* [ ] Formulário com PHPMailer + SMTP e reCAPTCHA.
 
 ---
 
 ## Contribuição
 
-Contribuições são bem-vindas! Sinta-se à vontade para abrir Issues, Pull Requests ou adaptar este README conforme o escopo do projeto evoluir.
+Contribuições são bem-vindas!
+
+1. Faça um fork
+2. Crie uma branch: `git checkout -b feat/minha-ideia`
+3. Commit: `git commit -m "feat: minha ideia"`
+4. Push: `git push origin feat/minha-ideia`
+5. Abra um Pull Request
 
 ---
 
-[1]: https://github.com/TRogato/landingpage "GitHub - TRogato/landingpage"
+
+```
