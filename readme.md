@@ -126,6 +126,4 @@ Contribuições são bem-vindas! Sinta-se à vontade para abrir Issues, Pull Req
 
 ---
 
-Se quiser personalizar ainda mais o README com base em funcionalidades específicas do seu projeto, é só avisar!
-
 [1]: https://github.com/TRogato/landingpage "GitHub - TRogato/landingpage"
