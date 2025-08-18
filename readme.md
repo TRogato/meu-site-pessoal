@@ -118,12 +118,4 @@ Contribuições são bem-vindas! Sinta-se à vontade para abrir Issues, Pull Req
 
 ---
 
-### Dicas extras (caso queira expandir)
-
-* 📋 Adicionar meta-informações sobre tecnologias usadas, como frameworks CSS ou bibliotecas JS.
-* ⚙ Detalhar como instalar dependências (se houver automação com npm, gulp, etc.).
-* 📄 Incluir uma breve descrição do formulário de contato, por exemplo “redireciona e envia e-mail via script PHP”.
-
----
-
 [1]: https://github.com/TRogato/landingpage "GitHub - TRogato/landingpage"
