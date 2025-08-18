@@ -1,137 +1,131 @@
-Aqui está um modelo de **README.md** em português para o repositório **TRogato/landingpage**, com base na estrutura de arquivos observada (HTML, CSS, PHP, JavaScript, imagens) e nas páginas que compõem a landing page (index.html, contato.html, projetos.html, experiência.html, formação.html) ([GitHub][1]).
+Aqui está um exemplo de **README.md** em português para o repositório **TRogato/landingpage**, com base na estrutura de arquivos visível (HTML, CSS, JS, PHP, páginas como index.html, contato.html, formacao.html etc.) ([GitHub][1]):
 
 ---
 
-```markdown
-# Landing Page – Projeto TRogato
+````markdown
+# Landing Page
 
-**Landing Page pessoal com navegação entre seções:**
-- index.html (página inicial)
-- formação.html (formação acadêmica)
-- experiência.html (experiência profissional)
-- projetos.html (projetos)
-- contato.html (formulário de contato)
+Repositório contendo uma landing page estática composta por HTML, CSS, JavaScript e PHP.
 
----
+## Índice
 
-## Tecnologias Utilizadas
-
-Este projeto foi desenvolvido com as seguintes tecnologias:
-
-- **HTML** — estrutura das páginas (aprox. 81,5 % do código)  
-- **CSS** — estilização visual (aprox. 15,8 %)  
-- **PHP** — integração ou processamento (aprox. 2,1 %)  
-- **JavaScript** — interatividade (aprox. 0,6 %)  
-:contentReference[oaicite:1]{index=1}
+- [Sobre](#sobre)  
+- [Funcionalidades](#funcionalidades)  
+- [Conteúdo](#conteúdo)  
+- [Requisitos](#requisitos)  
+- [Instalação e uso](#instalação-e-uso)  
+- [Estrutura do projeto](#estrutura-do-projeto)  
+- [Licença](#licença)
 
 ---
 
-## Estrutura do Projeto
+## Sobre
 
-```
-
-landingpage/
-├── css/
-│   └── <!-- arquivos CSS -->
-├── js/
-│   └── <!-- scripts JavaScript -->
-├── images/
-│   └── <!-- imagens utilizadas -->
-├── index.html
-├── formação.html
-├── experiência.html
-├── projetos.html
-├── contato.html
-├── (possíveis arquivos PHP adicionais)
-└── README.md
-
-````
+Este projeto é uma landing page informativa e estática, construída com HTML, CSS, JS e PHP, ideal para apresentação pessoal ou profissional de portfólio.
 
 ---
 
-## Como Executar
+## Funcionalidades
 
-1. Clone este repositório:
+- Interface visual responsiva e moderna com HTML/CSS.  
+- Navegação entre páginas: 
+  - `index.html` – página principal.
+  - `contato.html` – formulário de contato (renderização ou envio pode envolver PHP).
+  - `experiencia.html` – seção de experiência.
+  - `formacao.html` – seção de formação acadêmica.
+  - `projetos.html` – exibição de projetos pessoais ou profissionais.  
+- Estilização em CSS nos diretórios `css/`.  
+- Scripts interativos ou funcionais em JavaScript no diretório `js/`.  
+- Uso de PHP no diretório `php/` (possivelmente para processar formulários ou incluir templates).
+
+---
+
+## Conteúdo
+
+| Linguagem/Tipo       | Proporção     |
+|----------------------|---------------|
+| HTML                 | ~81,5 %       |
+| CSS                  | ~15,8 %       |
+| PHP                  | ~2,1 %        |
+| JavaScript           | ~0,6 %        |
+
+(Valores aproximados com base nas linguagens detectadas no repositório) :contentReference[oaicite:1]{index=1}
+
+---
+
+## Requisitos
+
+- Servidor web (locamente, por exemplo: Apache, Nginx ou PHP embutido).  
+- PHP instalado (caso os scripts presentes envolvam funcionalidades server-side).  
+- Navegador moderno para visualização da interface.
+
+---
+
+## Instalação e uso
+
+1. Clone o repositório  
    ```bash
    git clone https://github.com/TRogato/landingpage.git
 ````
 
-2. Acesse a pasta:
+2. Navegue até o diretório do projeto
 
    ```bash
    cd landingpage
    ```
-3. Abra a página inicial em um navegador (por exemplo, `index.html`).
-4. Se houver funcionalidades via **PHP** (formulário de contato, backend, etc.), execute em um ambiente local com servidor web, por exemplo:
+3. Clone diretamente no seu servidor web (ex: `htdocs`, `www`, `public_html`) ou execute um servidor local usando PHP:
 
-   * Usando PHP builtin server:
+   ```bash
+   php -S localhost:8000
+   ```
+4. Acesse no navegador:
 
-     ```bash
-     php -S localhost:8000
-     ```
-   * Ou utilize um ambiente como XAMPP, WAMP, MAMP, etc.
-
----
-
-## Conteúdo das Páginas
-
-* **index.html** — página inicial com introdução e navegação para as demais seções.
-* **formação.html** — exibe background acadêmico.
-* **experiência.html** — mostra experiência profissional.
-* **projetos.html** — galeria ou listagem de projetos realizados.
-* **contato.html** — formulário ou informações de contato com integração PHP (caso exista).
+   * Página inicial: `http://localhost:8000/index.html`
+   * Outras páginas: `contato.html`, `experiencia.html`, `formacao.html`, `projetos.html`
 
 ---
 
-## Personalização
+## Estrutura do projeto
 
-Para adaptar este template à sua identidade:
-
-* Substitua textos de exemplo por suas informações pessoais.
-* Atualize ou troque imagens em `images/`.
-* Ajuste estilos no CSS conforme sua paleta de cores ou tipografia preferida.
-* Se desejar, adicione novas seções, links para redes sociais ou interações com JavaScript.
-
----
-
-## Contribuição
-
-Contribuições são bem-vindas! Para colaborar:
-
-1. Fork este repositório.
-2. Crie uma branch com sua feature ou correção (`git checkout -b minha-feature`).
-3. Faça commit de suas alterações (`git commit -m "Adiciona ..."`).
-4. Push para a branch (`git push origin minha-feature`).
-5. Abra um Pull Request para revisar suas mudanças.
+```
+landingpage/
+├── css/
+│   └── … (arquivos de estilo CSS)
+├── images/
+│   └── … (imagens usadas no site)
+├── js/
+│   └── … (scripts JavaScript)
+├── php/
+│   └── … (scripts PHP, se houver)
+├── index.html
+├── contato.html
+├── experiencia.html
+├── formacao.html
+└── projetos.html
+```
 
 ---
 
 ## Licença
 
-Este projeto está licenciado sob [MIT License](LICENSE) (ou substitua conforme aplicável).
+Este projeto não possui licença definida. Sinta-se livre para usá-lo, cloná-lo ou adaptá-lo conforme sua necessidade. Caso deseje, você pode adicionar uma licença como [MIT](https://choosealicense.com/licenses/mit/) ou outra de sua preferência.
 
 ---
 
-## Contato
+## Contribuição
 
-Para dúvidas ou sugestões, abra uma issue ou entre em contato via `contato.html`.
-
----
-
-### Exemplo de Visualização
-
-| Página             | Descrição                               |
-| ------------------ | --------------------------------------- |
-| `index.html`       | Visão geral e navegação entre seções    |
-| `formação.html`    | Dados acadêmicos (cursos, instituições) |
-| `experiência.html` | Histórico e detalhes profissionais      |
-| `projetos.html`    | Imagens e descrições de projetos        |
-| `contato.html`     | Formulário ou informações para contato  |
+Contribuições são bem-vindas! Sinta-se à vontade para abrir Issues, Pull Requests ou adaptar este README conforme o escopo do projeto evoluir.
 
 ---
 
-## Considerações Finais
+### Dicas extras (caso queira expandir)
 
-Este README proporciona uma visão clara e organizada do que é o projeto, como executá-lo e personalizá-lo. Se quiser, posso ajudar também com sugestões de layout, responsividade ou otimização. É só avisar!
+* 📋 Adicionar meta-informações sobre tecnologias usadas, como frameworks CSS ou bibliotecas JS.
+* ⚙ Detalhar como instalar dependências (se houver automação com npm, gulp, etc.).
+* 📄 Incluir uma breve descrição do formulário de contato, por exemplo “redireciona e envia e-mail via script PHP”.
+
+---
+
+Se quiser personalizar ainda mais o README com base em funcionalidades específicas do seu projeto, é só avisar!
 
 [1]: https://github.com/TRogato/landingpage "GitHub - TRogato/landingpage"
